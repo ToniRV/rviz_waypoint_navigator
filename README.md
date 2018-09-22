@@ -68,11 +68,15 @@ a) Gazebo with the drone
 b) RVIZ with a drawn drone with interactive markers shaped as a frame of reference.
 You can click and drag along these arrows to move the drawn drone around.
 Then, right click on it: a drop-menu should appear.
-Click on ``Store waypoint``.
+Click on ``Store pose as waypoint``.
 Repeat as long as you want.
-Then, right click again to see the menu and click ``Plan path``.
+Then, right click again to see the menu and click ``Plan path through stored waypoints``.
 You should see the drone moving.
+
+See Issues section below if you encounter problems.
 
 ## Simulation
   ### Gazebo + RotorS
 
+## Issues
+If you do not see the drawn drone in Rviz, reset the InteractiveMarkers topic at the left side panel in Rviz by clicking on ``Update Topic`` and clicking to the topic which should be ``/firefly/rviz_waypoint_navigator/update``.
