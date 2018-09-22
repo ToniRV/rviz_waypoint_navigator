@@ -1,0 +1,21 @@
+- git: {local-name: catkin_simple, uri: 'git@github.com:catkin/catkin_simple.git',
+    version: 0e62848b12da76c8cc58a1add42b4f894d1ac21e}
+- git: {local-name: eigen_catkin, uri: 'git@github.com:ethz-asl/eigen_catkin.git',
+    version: 00b5eb254bad8de9cd68d238aa994e443062cf30}
+- git: {local-name: eigen_checks, uri: 'git@github.com:ethz-asl/eigen_checks.git',
+    version: 22a6247a3df11bc285d43d1a030f4e874a413997}
+- git: {local-name: geodetic_utils, uri: 'git@github.com:ethz-asl/geodetic_utils.git',
+    version: c619b7f7af3fe1320df300c415715c5ecc2685e6}
+- git: {local-name: glog_catkin, uri: 'git@github.com:ethz-asl/glog_catkin.git', version: dcb4559be6b9f9248c543df6789d46271c13efcf}
+- git: {local-name: hector_gazebo, uri: 'git@github.com:tu-darmstadt-ros-pkg/hector_gazebo.git',
+    version: fdc01f6d77d477d985dfa2f7e13ce8aff50edc27}
+- git: {local-name: mav_comm, uri: 'git@github.com:ethz-asl/mav_comm.git', version: 87b9039c51dd7c678e8937febb7ef02711ad471e}
+- git: {local-name: mav_control_rw, uri: 'git@github.com:ethz-asl/mav_control_rw.git',
+    version: 207058d78428b944fb8afe51cde06bf9629d8d7a}
+- git: {local-name: mav_trajectory_generation, uri: 'git@github.com:ethz-asl/mav_trajectory_generation.git',
+    version: 67696af33216acc5eba9d58a920ae435f6460d13}
+- git: {local-name: nlopt, uri: 'git@github.com:ethz-asl/nlopt.git', version: 04ae2f544b2cb49a7842d0fedf1f36147eddaf08}
+- git: {local-name: rotors_simulator, uri: 'git@github.com:ethz-asl/rotors_simulator.git',
+    version: 9299985db68cf5894661ec6413a24effef424180}
+- git: {local-name: waypoint_navigator, uri: 'git@github.com:ethz-asl/waypoint_navigator.git',
+    version: 98b030b1095c85a22b89c1914fff3c8ff6f408c0}
