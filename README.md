@@ -5,3 +5,7 @@ GUI interface for waypoint_navigator using Rviz.
 
 ## Usage
 
+## Simulation
+  ### Unity
+  ### Gazebo + RotorS
+

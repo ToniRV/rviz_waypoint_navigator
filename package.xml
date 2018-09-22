@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <package>
-  <name>rviz_path_planner</name>
+  <name>rviz_waypoint_navigator</name>
   <version>0.1.0</version>
-  <description>A rviz path planning tool with interactive markers</description>
+  <description>Rviz plugin using interactive markers for a click-and-drag user-friendly graphical interface with waypoint_navigator and mav_trajectory_optimization. It allows to specify waypoints in Rviz which the drone has to visit, while calculating a trajectory through these and eventually sending commands to the drone.</description>
 
-  <maintainer email="tonirosinol@hotmail.com">ToniRV</maintainer>
+  <maintainer email="tonirosinol@mit.edu">Toni Rosinol</maintainer>
 
   <license>BSD</license>
 
