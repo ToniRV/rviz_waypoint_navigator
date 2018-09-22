@@ -790,7 +790,7 @@ int main(int argc, char** argv)
   pose_pub_ = n_pub.advertise<geometry_msgs::PoseStamped>("command/pose", 10);
 
   server.reset( new interactive_markers::InteractiveMarkerServer(
-                  "rviz_path_planner","",false) );
+                  "rviz_waypoint_navigator","",false) );
 
   ros::Duration(0.1).sleep();
 

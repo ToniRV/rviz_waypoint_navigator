@@ -9,15 +9,15 @@
   <!-- Use simulation, overrides use_vicon-->
   <arg name="use_simulation"           default="true"/>
 
-  <include file="$(find rviz_path_planner)/launch/waypoint_navigation.launch">
+  <include file="$(find rviz_waypoint_navigator)/launch/waypoint_navigation.launch">
     <arg name="mav_name" value="$(arg mav_name)"/>
     <arg name="frame_id" value="$(arg frame_id)"/>
     <arg name="use_vicon" value="$(arg use_vicon)"/>
     <arg name="use_simulation" value="$(arg use_simulation)"/>
   </include>
   <group ns="$(arg mav_name)">
-    <node name="rviz_path_planner" pkg="rviz_path_planner"
-      type="rviz_path_planner" output="screen">
+    <node name="rviz_waypoint_navigator" pkg="rviz_waypoint_navigator"
+      type="rviz_waypoint_navigator" output="screen">
       <remap from="command/pose"             to="$(arg command/pose)"/>
       <param name="scale"                    value="$(arg scale)"/>
       <param name="frame_id"                 value="$(arg frame_id)"/>
