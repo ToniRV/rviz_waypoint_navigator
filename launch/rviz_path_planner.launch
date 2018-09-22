@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="mav_name"                 default="firefly"/>
+  <arg name="command/pose"             default="/$(arg mav_name)/command/pose"/>
+  <arg name="frame_id"                 default="world"/>
+  <arg name="scale"                    default="0.2"/>
+  <arg name="use_vicon"                default="false"/>
+  <!-- Use simulation, overrides use_vicon-->
+  <arg name="use_simulation"           default="true"/>
+
+  <include file="$(find rviz_path_planner)/launch/waypoint_navigation.launch">
+    <arg name="mav_name" value="$(arg mav_name)"/>
+    <arg name="frame_id" value="$(arg frame_id)"/>
+    <arg name="use_vicon" value="$(arg use_vicon)"/>
+    <arg name="use_simulation" value="$(arg use_simulation)"/>
+  </include>
+  <group ns="$(arg mav_name)">
+    <node name="rviz_path_planner" pkg="rviz_path_planner"
+      type="rviz_path_planner" output="screen">
+      <remap from="command/pose"             to="$(arg command/pose)"/>
+      <param name="scale"                    value="$(arg scale)"/>
+      <param name="frame_id"                 value="$(arg frame_id)"/>
+      <param name="r_color" value="0.0"/>
+      <param name="g_color" value="1.0"/>
+      <param name="b_color" value="1.0"/>
+    </node>
+  </group>
+</launch>

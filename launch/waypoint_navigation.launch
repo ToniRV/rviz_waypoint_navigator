@@ -1,0 +1,26 @@
+<launch>
+  <arg name="mav_name"  default="tangofly_toni"/>
+  <arg name="namespace" default="$(arg mav_name)"/>
+  <arg name="frame_id"  default="mission"/>
+  <arg name="use_vicon" default="false"/>
+  <arg name="use_simulation" default="true"/>
+
+  <group ns="$(arg namespace)" >
+    <node name="waypoint_navigator_node" pkg="waypoint_navigator" type="waypoint_navigator_node"  respawn="true" clear_params="true" output="screen">
+      <rosparam file="$(find rviz_path_planner)/parameters/trajectory_enu_asl_right_hw_map.yaml" />
+      <param name="mav_name" type="string" value="$(arg mav_name)"/>
+      <param name="frame_id" type="string" value="$(arg frame_id)" />
+
+      <!-- Real -->
+      <remap if="$(eval arg('use_vicon') == 0 and arg('use_simulation') == 0)" from="odometry" to="msf_core/odometry"/>
+      <!-- Mocap -->
+      <remap if="$(eval arg('use_vicon') == 1 and arg('use_simulation') == 0)" from="odometry" to="vrpn_client/estimated_odometry" />
+      <!-- Simulation -->
+      <remap if="$(eval arg('use_simulation') == 1)" from="odometry" to="ground_truth/odometry" />
+
+      <remap from="map_mission_tf" to="swe/swe/T_G_M"/>
+    </node>
+
+    <node name="trajectory_sampler" pkg="mav_trajectory_generation_ros" type="trajectory_sampler_node" output="screen"/>
+  </group>
+</launch>
