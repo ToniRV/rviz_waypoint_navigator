@@ -17,7 +17,7 @@ $ source /opt/ros/kinetic/setup.bash
 
 2. extra ROS packages, catkin-tools, and wstool:
 ```
-$ sudo apt-get install ros-kinetic-joy ros-kinetic-octomap-ros ros-kinetic-mavlink python-wstool python-catkin-tools protobuf-compiler libgoogle-glog-dev ros-kinetic-control-toolbox ros-kinetic-cmake-modules
+$ sudo apt-get install ros-kinetic-joy ros-kinetic-octomap-ros ros-kinetic-mavlink python-wstool python-catkin-tools protobuf-compiler libgoogle-glog-dev ros-kinetic-control-toolbox ros-kinetic-cmake-modules ros-kinetic-mavros liblapacke-dev ros-kinetic-gazebo-plugins
 $ sudo rosdep init
 $ rosdep update
 ```
@@ -59,7 +59,17 @@ source ~/.bashrc
 catkin build
 ```
 
-## Usage
+6.1. If you have compilation issues with `rotors_hil_interface`, just do not compile it, as we are not using it:
+```
+roscd rotors_hil_interface && touch CATKIN_IGNORE
+```
+
+7. Finally, install gazebo (version >= 8.0)
+```
+curl -sSL http://get.gazebosim.org | sh
+```
+
+## Usage with Gazebo and RVIZ
 
 1. In a new terminal (remember to source the workspace), type:
 
