@@ -88,6 +88,9 @@ curl -sSL http://get.gazebosim.org | sh
 rviz -d ~/catkin_ws/src/rviz_waypoint_navigator/rviz/rviz_waypoint_navigator.rviz
 ```
 
+> **NOTE** If you do not see the drawn drone in Rviz, reset the InteractiveMarkers topic at the left side panel in Rviz by clicking on ``Update Topic`` and clicking to the topic which should be ``/firefly/rviz_waypoint_navigator/update``.
+Repeat several times, until you see the drone with interactive markers, otherwise try relaunch the launch files.
+
 Now you should see two screens:
 a) Gazebo with the drone
 b) RVIZ with a drawn drone with interactive markers shaped as a frame of reference.
@@ -104,4 +107,3 @@ See Issues section below if you encounter problems.
   ### Gazebo + RotorS
 
 ## Issues
-If you do not see the drawn drone in Rviz, reset the InteractiveMarkers topic at the left side panel in Rviz by clicking on ``Update Topic`` and clicking to the topic which should be ``/firefly/rviz_waypoint_navigator/update``.
