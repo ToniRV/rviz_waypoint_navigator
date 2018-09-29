@@ -37,7 +37,7 @@ catkin config --merge-devel
 ```
 cd src
 wstool init
-wstool set --git waypoint_navigator git@github.com:ToniRV/rviz_waypoint_navigator.git -y
+wstool set --git rviz_waypoint_navigator git@github.com:ToniRV/rviz_waypoint_navigator.git -y
 wstool update
 wstool merge rviz_waypoint_navigator/install/gazebo_rotors_simulation.rosinstall
 wstool update -j8
