@@ -17,7 +17,7 @@ $ source /opt/ros/kinetic/setup.bash
 
 2. extra ROS packages, catkin-tools, and wstool:
 ```
-$ sudo apt-get install ros-kinetic-joy ros-kinetic-octomap-ros ros-kinetic-mavlink python-wstool python-catkin-tools protobuf-compiler libgoogle-glog-dev ros-kinetic-control-toolbox ros-kinetic-cmake-modules ros-kinetic-mavros liblapacke-dev ros-kinetic-gazebo-plugins
+$ sudo apt-get install ros-kinetic-joy ros-kinetic-octomap-ros ros-kinetic-mavlink python-wstool python-catkin-tools protobuf-compiler libgoogle-glog-dev ros-kinetic-control-toolbox ros-kinetic-cmake-modules ros-kinetic-mavros liblapacke-dev ros-kinetic-gazebo-plugins ros-kinetic-gazebo-ros ros-kinetic-xacro
 $ sudo rosdep init
 $ rosdep update
 ```
@@ -88,9 +88,6 @@ curl -sSL http://get.gazebosim.org | sh
 rviz -d ~/catkin_ws/src/rviz_waypoint_navigator/rviz/rviz_waypoint_navigator.rviz
 ```
 
-> **NOTE** If you do not see the drawn drone in Rviz, reset the InteractiveMarkers topic at the left side panel in Rviz by clicking on ``Update Topic`` and clicking to the topic which should be ``/firefly/rviz_waypoint_navigator/update``.
-Repeat several times, until you see the drone with interactive markers, otherwise try relaunch the launch files.
-
 Now you should see two screens:
 a) Gazebo with the drone
 b) RVIZ with a drawn drone with interactive markers shaped as a frame of reference.
@@ -107,3 +104,6 @@ See Issues section below if you encounter problems.
   ### Gazebo + RotorS
 
 ## Issues
+If you do not see the drawn drone in Rviz, reset the InteractiveMarkers topic at the left side panel in Rviz by clicking on ``Update Topic`` and clicking to the topic which should be ``/firefly/rviz_waypoint_navigator/update``.
+### Compilation Issues
+- If eigen_checks does not compile because it cannot find gtest, it appears that one potential solution would be to delete the file in ``
