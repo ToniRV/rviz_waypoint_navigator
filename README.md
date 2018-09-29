@@ -17,7 +17,7 @@ $ source /opt/ros/kinetic/setup.bash
 
 2. extra ROS packages, catkin-tools, and wstool:
 ```
-$ sudo apt-get install ros-kinetic-joy ros-kinetic-octomap-ros ros-kinetic-mavlink python-wstool python-catkin-tools protobuf-compiler libgoogle-glog-dev ros-kinetic-control-toolbox ros-kinetic-cmake-modules ros-kinetic-mavros liblapacke-dev ros-kinetic-gazebo-plugins
+$ sudo apt-get install ros-kinetic-joy ros-kinetic-octomap-ros ros-kinetic-mavlink python-wstool python-catkin-tools protobuf-compiler libgoogle-glog-dev ros-kinetic-control-toolbox ros-kinetic-cmake-modules ros-kinetic-mavros liblapacke-dev ros-kinetic-gazebo-plugins ros-kinetic-gazebo-ros ros-kinetic-xacro
 $ sudo rosdep init
 $ rosdep update
 ```
@@ -107,3 +107,6 @@ See Issues section below if you encounter problems.
   ### Gazebo + RotorS
 
 ## Issues
+### Compilation Issues
+- If eigen_checks does not compile because it cannot find gtest, it appears that one potential solution would be to delete the file in ``sudo mv /usr/share/cmake-3.5/Modules/FindGMock.cmake /usr/share/cmake-3.5/Modules/FindGMock.cmake.backup``.
+As explained here: https://stackoverflow.com/questions/51969824/catkin-cannot-find-gtest
