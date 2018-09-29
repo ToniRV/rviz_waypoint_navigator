@@ -89,7 +89,7 @@ rviz -d ~/catkin_ws/src/rviz_waypoint_navigator/rviz/rviz_waypoint_navigator.rvi
 ```
 
 > **NOTE** If you do not see the drawn drone in Rviz, reset the InteractiveMarkers topic at the left side panel in Rviz by clicking on ``Update Topic`` and clicking to the topic which should be ``/firefly/rviz_waypoint_navigator/update``.
-Repeat several times, until you see the drone with interactive markers, otherwise try relaunch the launch files.
+Repeat several times, until you see the drone with interactive markers, otherwise try to relaunch the launch files.
 
 Now you should see two screens:
 a) Gazebo with the drone
