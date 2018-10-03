@@ -1,0 +1,61 @@
+# GPS/ENU trajectory to be read and executed by waypoint_navigator
+
+# Format of coordinates ('gps'/'enu')
+coordinate_type: 'enu'
+
+# Topic to publish command messages to ('trajectory'/'poses'/'polynomial')
+path_mode: 'polynomial'
+
+# Limit distance between poses (true/false)
+intermediate_poses: true
+# Maximum distance between poses [m]
+intermediate_pose_separation: 0.5
+
+# Distance before target waypoint has been "reached" [m]
+# Not used in polynomial mode
+waypoint_achievement_distance: 0.1
+intermediate_poses: true
+
+# Maximum speed [m/s] and acceleration [m/s^2]
+reference_speed: 1
+reference_acceleration: 1
+
+# Height for takeoff command [m]
+takeoff_height: 0.5
+# Height for landing command [m]
+landing_height: -0.5
+
+# Heading mode ('auto'/'manual'/'fixed')
+# 'auto': faces in the direction of travel
+# 'manual': user-specified (below)
+# 'fixed': heading is zero for entire trajectory
+heading_mode: 'manual'
+
+# Trajectory
+# x (ENU) [m] / longitude (GPS) [deg]
+#easting: [0, 6, 6, 0]
+# VICON
+#easting: [0.2, 3.47, 2.54, -3.2, -3.9, -8.2, -5.1, -2.5, 0.0, 0.01]
+#easting: [0.2, 3.47, 2.54, -3.2, 2.54, 3.47, 0.2, 0.01, -2.5]
+easting: [2.3, 10, 12.1, 13, 13.7, 13.6, 12.9, 11.15, 10.68, 8.55, 9.12, 9.9, 10, 2.3, -0.1, -0.1]
+
+
+# y (ENU) [m] / latitude (GPS) [deg]
+#northing: [3, 3, 0, 0]
+# VICON
+#northing: [-1.5, -9.6, -10.46, -12.4, -12.3, -2.3, -0.25, 0.59, 0.0, 0.01]
+#northing: [-1.5, -9.6, -10.46, -12.4, -10.46, -9.6, -1.5, 0.01, 0.59]
+northing: [-0.7, -2.8, 0.25, 0.47, -0.5, -2.3, -4.0, -8.97, -9.5, -8.5, -6.3, -3.1, -2.8, -0.7, 0.0, 0.0]
+
+# z (ENU) [m] / altitude (GPS) [m]
+#height: [1, 1, 1, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8]
+#height: [1, 1, 1, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8]
+height: [0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.0, -0.1]
+# Heading [deg]
+#heading: [11.43, 11.43, -177.6, -168.5, -175.0, -180.0, -220.0, 0.0]
+#heading: [20, 20, 20, 20, 180, 205, 230, 200, 180, 180]
+#heading: [20, 20, 20, 100, 180, 205, 180, 20, 20]
+heading: [90, 90, 110, 140, 60, 40, 40, 20, 0, 300, 260, 220, 160, 100, 90, 90]
+# Waiting time at each waypoint [s]
+#waiting_time: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0]
+waiting_time: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 10.0]
