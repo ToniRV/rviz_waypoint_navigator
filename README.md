@@ -15,9 +15,10 @@ $ rosdep update
 $ source /opt/ros/kinetic/setup.bash
 ```
 
-2. extra ROS packages, catkin-tools, and wstool:
+2. extra ROS packages, catkin-tools, wstool, and others:
 ```
-$ sudo apt-get install ros-kinetic-joy ros-kinetic-octomap-ros ros-kinetic-mavlink python-wstool python-catkin-tools protobuf-compiler libgoogle-glog-dev ros-kinetic-control-toolbox ros-kinetic-cmake-modules ros-kinetic-mavros liblapacke-dev ros-kinetic-gazebo-plugins ros-kinetic-gazebo-ros ros-kinetic-xacro
+$ sudo apt-get install ros-kinetic-joy ros-kinetic-octomap-ros ros-kinetic-mavlink ros-kinetic-control-toolbox ros-kinetic-cmake-modules ros-kinetic-mavros ros-kinetic-gazebo-plugins ros-kinetic-gazebo-ros ros-kinetic-xacro 
+$ sudo apt-get install python-wstool python-catkin-tools autoconf protobuf-compiler libgoogle-glog-dev liblapacke-dev
 $ sudo rosdep init
 $ rosdep update
 ```

@@ -18,7 +18,7 @@
       <!-- Simulation -->
       <remap if="$(eval arg('use_simulation') == 1)" from="odometry" to="ground_truth/odometry" />
 
-      <remap from="map_mission_tf" to="swe/swe/T_G_M"/>
+      <!-- <remap from="map_mission_tf" to="swe/swe/T_G_M"/> -->
     </node>
 
     <node name="trajectory_sampler" pkg="mav_trajectory_generation_ros" type="trajectory_sampler_node" output="screen"/>
