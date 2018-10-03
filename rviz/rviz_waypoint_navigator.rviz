@@ -105,7 +105,10 @@ Visualization Manager:
       Marker Topic: /firefly/waypoint_navigator_polynomial_markers
       Name: Planned-Trajectory
       Namespaces:
-        {}
+        acceleration: false
+        path: true
+        pose: false
+        velocity: true
       Queue Size: 100
       Value: true
     - Class: rviz/InteractiveMarkers
@@ -181,10 +184,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.899797857
+      Pitch: 0.964798272
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.74719572
+      Yaw: 4.83219671
     Saved: ~
 Window Geometry:
   "&Displays":
@@ -202,5 +205,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 956
-  X: 960
+  X: 956
   Y: 0
