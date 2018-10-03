@@ -7,7 +7,7 @@
 
   <group ns="$(arg namespace)" >
     <node name="waypoint_navigator_node" pkg="waypoint_navigator" type="waypoint_navigator_node"  respawn="true" clear_params="true" output="screen">
-      <rosparam file="$(find rviz_waypoint_navigator)/parameters/trajectory_enu_asl_right_hw_map.yaml" />
+      <rosparam file="$(find rviz_waypoint_navigator)/parameters/trajectory_vnav.yaml" />
       <param name="mav_name" type="string" value="$(arg mav_name)"/>
       <param name="frame_id" type="string" value="$(arg frame_id)" />
 

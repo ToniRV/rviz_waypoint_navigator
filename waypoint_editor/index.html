@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Waypoint editor</title>
+
+	<style>
+	#editor {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 80px;
+		width:100 %;
+		left: 0;
+	}
+
+	.viewCanvas{
+		position: absolute;
+		top: 0;
+		left: 0;
+		border:1px solid #29447E;
+	}
+	.ui-layout-pane { /* all 'panes' */
+		background: #FFF;
+		border: 1px solid #BBB;
+		padding: 10px;
+		overflow: auto;
+	}
+	.ui-layout-resizer { /* all 'resizer-bars' */
+		background: #DDD;
+	}
+	.ui-layout-toggler { /* all 'toggler-buttons' */
+		background: #AAA;
+	}
+
+	.bottombar, input{
+		font-family: palatino;
+		font-size:15pt;
+	}
+	</style>
+
+	<script type="text/javascript" src="js/jquery.layout/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.layout/jquery.ui.all.js"></script>
+	<script type="text/javascript" src="js/jquery.layout/jquery.layout.js"></script>
+	<script type="text/javascript" src="js/yaml.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" charset="utf-8"></script>
+
+	<script type="text/javascript" src="./waypoint_editor.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function () {
+		documentLayout = $('body').layout({east__size: '800'});
+
+		// Init ace editor
+		editor = ace.edit("editor");
+		//editor.setTheme("ace/theme/monokai");
+		editor.getSession().setMode("ace/mode/yaml");
+		//editor.getSession().setUseWrapMode(true);
+		editor.setFontSize("16px");
+		// editor.getSession().on('change', function() {
+		// 	yamlToTrajs(editor.getSession().getValue());
+		// });
+		//
+		editor.$blockScrolling = Infinity;
+
+    // Init spline stuff
+		init();
+    });
+  </script>
+
+  <script type="text/javascript">
+		function updateText(txt){
+				var editor = ace.edit("editor");
+				editor.setValue(txt);
+		}
+	</script>
+
+</head>
+
+<body>
+<div class="ui-layout-east">
+    <div id="editor" name="editor">
+			// Yaml code should appear here
+    </div>
+		<div class="bottombar" style = "position:absolute; bottom:30px"> <!--No. of waypoints per Bezier segment:&nbsp;&nbsp;-->
+			<!--input type="number" min="2" step="1" id="npoints" value="10"
+			       onChange="javascript:noDiscrPointsPerSegment=value;updateText(trajsToYaml(value));"> </input disabled, not sure it works properly-->
+			<input type="button" value="from YAML"
+			 			       onClick="javascript:yamlToTrajs(editor.getSession().getValue());"></input>
+		</div>
+</div>
+
+<div class="ui-layout-center">
+	<canvas class="viewCanvas" id="splineCanvasTop"></canvas>
+  <canvas class="viewCanvas" id="splineCanvasFront"></canvas>
+</div>
+
+</body>
+</html>
