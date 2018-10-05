@@ -1,0 +1,34 @@
+coordinate_type: 'enu'               # Format of coordinates ('gps'/'enu')
+path_mode: 'polynomial'              # Topic to publish command messages to ('trajectory'/'poses'/'polynomial')
+intermediate_poses: false             # Limit distance between poses (true/false)
+intermediate_pose_separation: 10.0   # Maximum distance between poses [m]
+waypoint_achievement_distance: 0.1   # Distance before target waypoint has been "reached" [m] (Not used in polynomial mode)
+reference_speed: 30                   # max speed (m/s)
+reference_acceleration: 20           # max accel (m/s^2)
+takeoff_height: 0.5                  # Height for takeoff command [m]
+landing_height: -0.5                 # Height for landing command [m]
+
+
+heading_mode: 'auto' # Heading mode ('auto'/'manual'/'fixed')
+                       # 'auto': faces in the direction of travel
+                       # 'manual': user-specified (below)
+                       # 'zero': heading is zero for entire trajectory
+
+easting: [0,1.3448791045062172,3.9,5.11062045393684,3.94,1.1881327515771727,-1.82,-3.392953380243347,-2.06,1.4558876456536292,5.36,7.320416843887722,5.3,0.500300225101987,-4.24,-6.276992121430468,-4.3,-1.4499496414047293]
+northing: [-0.8,-1.82,-2.84,-1.4430398485283036,0.86,-0.517522484162738,-2.7800000000000002,-0.9433052196156609,1.24,0.33538202875095235,-0.84,1.650895132260406,3.74,3.5075903912953437,3.58,1.29,-1,-0.9]
+height: [0,2.0873149128243744,2.72,4.372614110057216,5.38,5.648530074553371,5.54,4.201469925446629,3.24,3.13,3.02,4.89,6.76,6.88817600846286,6.72,4.22182399153714,2.02,1.4265281374799088]
+heading: [-180,-33.130392987476945,0,89.14146124189354,142.83926333180543,-133.1757664141642,179.16629874691208,93.67721592825038,14.191096549023982,-24.5899008953273,3.0127875041833425,88.3334178597837,-171.88733853924697,179.6320269538691,-180,-89.5497808420337,0,4.31051715476693]
+waiting_time: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+
+# raw_js_object:
+#  - { x: 500, y: 290, z: 400, yawy: 0, yawz: -1.5824237097512805, k: 1, l: 80, color: { r: 255, g: 0, b: 0, a: 1 }, arrowColor: { r: 0, g: 0, b: 0, a: 1 }, cpdist: 140 }
+#  - { x: 695, y: 392, z: 264, yawy: 0, yawz: -0.4983157942103058, k: 1, l: 80, color: { r: 0, g: 0, b: 0, a: 1 }, arrowColor: { r: 0, g: 0, b: 0, a: 1 }, cpdist: 90 }
+#  - { x: 697, y: 207, z: 131, yawy: -2.49301544626321, yawz: 0, k: 1, l: 80, color: { r: 0, g: 0, b: 0, a: 1 }, arrowColor: { r: 0, g: 0, b: 0, a: 1 }, cpdist: 100 }
+#  - { x: 409, y: 389, z: 123, yawy: -3.127509077766933, yawz: -0.2541247495556341, k: 1, l: 80, color: { r: 0, g: 0, b: 0, a: 1 }, arrowColor: { r: 0, g: 0, b: 0, a: 1 }, cpdist: 100 }
+#  - { x: 397, y: 188, z: 238, yawy: -0.2476813592488733, yawz: 0, k: 1, l: 80, color: { r: 0, g: 0, b: 0, a: 1 }, arrowColor: { r: 0, g: 0, b: 0, a: 1 }, cpdist: 100 }
+#  - { x: 768, y: 292, z: 249, yawy: -0.052583061610941714, yawz: 0, k: 1, l: 80, color: { r: 0, g: 0, b: 0, a: 1 }, arrowColor: { r: 0, g: 0, b: 0, a: 1 }, cpdist: 123 }
+#  - { x: 765, y: 63, z: 62, yawy: 3, yawz: 0, k: 1, l: 80, color: { r: 0, g: 0, b: 0, a: 1 }, arrowColor: { r: 0, g: 0, b: 0, a: 1 }, cpdist: 144 }
+#  - { x: 288, y: 71, z: 64, yawy: 0, yawz: 3, k: 1, l: 80, color: { r: 0, g: 0, b: 0, a: 1 }, arrowColor: { r: 0, g: 0, b: 0, a: 1 }, cpdist: 140 }
+#  - { x: 285, y: 300, z: 299, yawy: 0, yawz: 0, k: 1, l: 80, color: { r: 0, g: 0, b: 0, a: 1 }, arrowColor: { r: 0, g: 0, b: 0, a: 1 }, cpdist: 129 }
+#  - { x: 500, y: 290, z: 400, yawy: 0, yawz: 1, k: 1, l: 80, color: { r: 0, g: 0, b: 0, a: 1 }, arrowColor: { r: 0, g: 0, b: 0, a: 1 }, cpdist: 66 }
+#

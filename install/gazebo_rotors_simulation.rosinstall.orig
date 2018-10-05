@@ -18,5 +18,9 @@
 - git: {local-name: nlopt, uri: 'git@github.com:ethz-asl/nlopt.git', version: 04ae2f544b2cb49a7842d0fedf1f36147eddaf08}
 - git: {local-name: rotors_simulator, uri: 'git@github.com:ethz-asl/rotors_simulator.git',
     version: 9299985db68cf5894661ec6413a24effef424180}
+<<<<<<< HEAD
 - git: {local-name: waypoint_navigator, uri: 'git@github.com:ethz-asl/waypoint_navigator.git',
+=======
+- git: {local-name: waypoint_navigator, uri: 'git@github.com:ToniRV/waypoint_navigator.git',
+>>>>>>> 788b588bce43766ed0f17837ad0484f9ba36c53b
     version: master}
